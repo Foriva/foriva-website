@@ -9,14 +9,11 @@ content:
     type: file
     path: content/de.json
     fields:
-      - name: title
+      - name: headline
         label: Haupttitel
-        type: string
-      - name: subtitle
-        label: Untertitel
-        type: string
-      - name: description
-        label: Beschreibung
+        type: text
+      - name: intro
+        label: Einleitung
         type: text
 
   - name: francais
@@ -24,12 +21,9 @@ content:
     type: file
     path: content/fr.json
     fields:
-      - name: title
+      - name: headline
         label: Titre principal
-        type: string
-      - name: subtitle
-        label: Sous-titre
-        type: string
-      - name: description
-        label: Description
+        type: text
+      - name: intro
+        label: Introduction
         type: text
