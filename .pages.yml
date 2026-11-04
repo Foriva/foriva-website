@@ -9,11 +9,59 @@ content:
     type: file
     path: content/de.json
     fields:
+      - name: eyebrow
+        label: Kurzbeschreibung
+        type: string
       - name: headline
         label: Haupttitel
         type: text
       - name: intro
         label: Einleitung
+        type: text
+      - name: services_title
+        label: Titel Dienstleistungen
+        type: text
+      - name: services_intro
+        label: Einleitung Dienstleistungen
+        type: text
+      - name: service1_title
+        label: Dienstleistung 1 - Titel
+        type: string
+      - name: service1_text
+        label: Dienstleistung 1 - Beschreibung
+        type: text
+      - name: service2_title
+        label: Dienstleistung 2 - Titel
+        type: string
+      - name: service2_text
+        label: Dienstleistung 2 - Beschreibung
+        type: text
+      - name: service3_title
+        label: Dienstleistung 3 - Titel
+        type: string
+      - name: service3_text
+        label: Dienstleistung 3 - Beschreibung
+        type: text
+      - name: service4_title
+        label: Dienstleistung 4 - Titel
+        type: string
+      - name: service4_text
+        label: Dienstleistung 4 - Beschreibung
+        type: text
+      - name: profile_title
+        label: Profil - Titel
+        type: string
+      - name: profile_intro
+        label: Profil - Einleitung
+        type: text
+      - name: profile_text
+        label: Profil - Beschreibung
+        type: text
+      - name: profile_values
+        label: Profil - Werte
+        type: text
+      - name: profile_extra
+        label: Profil - Zusatz
         type: text
 
   - name: francais
@@ -21,9 +69,57 @@ content:
     type: file
     path: content/fr.json
     fields:
+      - name: eyebrow
+        label: Description courte
+        type: string
       - name: headline
         label: Titre principal
         type: text
       - name: intro
         label: Introduction
+        type: text
+      - name: services_title
+        label: Titre des prestations
+        type: text
+      - name: services_intro
+        label: Introduction des prestations
+        type: text
+      - name: service1_title
+        label: Prestation 1 - Titre
+        type: string
+      - name: service1_text
+        label: Prestation 1 - Description
+        type: text
+      - name: service2_title
+        label: Prestation 2 - Titre
+        type: string
+      - name: service2_text
+        label: Prestation 2 - Description
+        type: text
+      - name: service3_title
+        label: Prestation 3 - Titre
+        type: string
+      - name: service3_text
+        label: Prestation 3 - Description
+        type: text
+      - name: service4_title
+        label: Prestation 4 - Titre
+        type: string
+      - name: service4_text
+        label: Prestation 4 - Description
+        type: text
+      - name: profile_title
+        label: Profil - Titre
+        type: string
+      - name: profile_intro
+        label: Profil - Introduction
+        type: text
+      - name: profile_text
+        label: Profil - Description
+        type: text
+      - name: profile_values
+        label: Profil - Valeurs
+        type: text
+      - name: profile_extra
+        label: Profil - Complément
         type: text
