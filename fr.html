@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="fr-CH">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="FORIVA – conseil indépendant et management de transition dans les domaines de l'énergie, de la finance, des risques et de la stratégie. Michael Imhof, Valais." name="description"/>
+<meta content="#153746" name="theme-color"/>
+<title>FORIVA | Conseil &amp; Management de transition</title>
+<style>
+    :root {
+      --navy: #153746;
+      --deep: #102a37;
+      --teal: #4b8b8d;
+      --ink: #233d48;
+      --muted: #657981;
+      --paper: #fbfcfb;
+      --line: #dce5e4;
+      --snow: #eff4f3
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6
+    }
+
+    a {
+      color: inherit
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 4px
+    }
+
+    .wrap {
+      max-width: 1140px;
+      margin: auto;
+      padding: 0 32px
+    }
+
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .nav {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .12em;
+      font-size: 27px;
+      color: var(--navy);
+      line-height: 1
+    }
+
+    .brand i {
+      font-style: normal;
+      color: var(--teal)
+    }
+
+    nav {
+      display: flex;
+      gap: 32px
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: .03em;
+      color: var(--ink)
+    }
+
+    nav a:hover {
+      color: var(--teal)
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #f8fbfa 0%, #edf4f3 100%)
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      min-height: 590px;
+      align-items: center;
+      gap: 28px
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: #4a8587;
+      text-transform: uppercase
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5.2vw, 67px);
+      line-height: 1.12;
+      letter-spacing: -.045em;
+      font-weight: 650;
+      color: var(--navy);
+      margin: 20px 0 25px
+    }
+
+    .hero p {
+      max-width: 540px;
+      font-size: 18px;
+      color: #526d75;
+      margin: 0 0 30px
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      background: var(--navy);
+      color: white;
+      padding: 13px 21px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 3px;
+      transition: background .2s
+    }
+
+    .cta:hover {
+      background: #285567
+    }
+
+    .cta span {
+      font-size: 20px;
+      font-weight: 400
+    }
+
+    .alps {
+      width: 100%;
+      display: block;
+      filter: drop-shadow(0 14px 24px rgba(25, 64, 75, .08))
+    }
+
+    .hero-note {
+      position: absolute;
+      bottom: 26px;
+      right: 35px;
+      font-size: 10px;
+      letter-spacing: .16em;
+      color: #75949a;
+      text-transform: uppercase
+    }
+
+    section {
+      padding: 105px 0
+    }
+
+    .section-tag {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+      color: var(--teal)
+    }
+
+    h2 {
+      font-size: clamp(29px, 3.5vw, 43px);
+      line-height: 1.23;
+      letter-spacing: -.025em;
+      color: var(--navy);
+      font-weight: 650;
+      margin: 12px 0 23px
+    }
+
+    .intro {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 48px
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px
+    }
+
+    .service {
+      border: 1px solid var(--line);
+      padding: 32px 34px;
+      background: white;
+      min-height: 178px
+    }
+
+    .service .num {
+      font-size: 12px;
+      letter-spacing: .15em;
+      color: var(--teal)
+    }
+
+    .service h3 {
+      font-size: 21px;
+      line-height: 1.3;
+      color: var(--navy);
+      margin: 13px 0 10px
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px
+    }
+
+    .about {
+      background: var(--snow)
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 75px;
+      align-items: start
+    }
+
+    .about-aside {
+      border-top: 3px solid var(--teal);
+      padding-top: 24px
+    }
+
+    .about-aside strong {
+      display: block;
+      color: var(--navy);
+      font-size: 22px
+    }
+
+    .about-aside p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 6px
+    }
+
+    .about-copy p {
+      color: #526b74;
+      font-size: 16px;
+      margin: 0 0 19px
+    }
+
+    .about-copy .small {
+      font-size: 14px;
+      color: #6c8188
+    }
+
+    .statement {
+      background: var(--navy);
+      color: white;
+      padding: 66px 0
+    }
+
+    .statement p {
+      font-size: clamp(23px, 3.3vw, 36px);
+      line-height: 1.35;
+      letter-spacing: -.02em;
+      max-width: 880px;
+      margin: 0;
+      font-weight: 500
+    }
+
+    .statement em {
+      color: #a2d0d0;
+      font-style: normal
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px
+    }
+
+    .contact p {
+      color: var(--muted)
+    }
+
+    .contact-details {
+      border-top: 1px solid var(--line);
+      padding-top: 24px
+    }
+
+    .contact-details a {
+      display: block;
+      color: var(--navy);
+      font-size: 20px;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+      margin-bottom: 13px
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline
+    }
+
+    .contact-details .small {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap
+    }
+
+    .footer-inner a {
+      text-decoration: none
+    }
+
+    .footer-inner a:hover {
+      text-decoration: underline
+    }
+
+    @media(max-width:760px) {
+      .wrap {
+        padding: 0 23px
+      }
+
+      .nav {
+        min-height: 76px
+      }
+
+      .brand {
+        font-size: 24px
+      }
+
+      nav {
+        gap: 16px
+      }
+
+      nav a {
+        font-size: 12px
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 74px;
+        padding-bottom: 68px;
+        gap: 20px
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 10vw, 53px)
+      }
+
+      .hero p {
+        font-size: 16px
+      }
+
+      .alps {
+        max-width: 520px;
+        margin: auto
+      }
+
+      .hero-note {
+        display: none
+      }
+
+      section {
+        padding: 75px 0
+      }
+
+      .services,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .about-grid {
+        gap: 26px
+      }
+
+      .service {
+        padding: 26px
+      }
+
+      .statement {
+        padding: 55px 0
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      .cta {
+        transition: none
+      }
+    }
+  
+.lang-switch { display:flex; align-items:center; gap:8px; white-space:nowrap; font-size:13px; }
+.lang-switch a { text-decoration:none; color:var(--muted); }
+.lang-switch a[aria-current="page"] { color:var(--navy); font-weight:750; }
+.lang-switch a:hover { color:var(--teal); }
+.hero-visual img { width:100%; height:350px; object-fit:cover; border-radius:12px; display:block; }
+@media(max-width:760px) {
+ .nav { flex-wrap:wrap; padding-top:16px; padding-bottom:16px; }
+ nav { gap:12px; }
+ .hero-visual img { height:260px; }
+}
+
+.about-aside .linkedin-profile { display:inline-flex; align-items:center; margin-top:12px; font-size:14px; font-weight:650; color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
+.about-aside .linkedin-profile:hover { color:var(--teal); }
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav"><a aria-label="FORIVA – Accueil" class="brand" href="#start">FORIVA<i>.</i></a>
+<nav aria-label="Navigation principale"><a href="#leistungen">Prestations</a><a href="#profil">Profil</a><a href="#kontakt">Contact</a></nav>
+<div aria-label="Choix de langue" class="lang-switch"><a href="index.html" lang="de">DE</a> | <a aria-current="page" href="fr.html" lang="fr">FR</a></div></div>
+</header>
+<main>
+<div class="hero" id="start">
+<div class="wrap hero-grid">
+<div><div class="eyebrow">Conseil &amp; renfort spécialisé et soutien de projet à court terme</div><h1>Une vision entrepreneuriale.<br/>Au service d’une valeur durable.</h1><p>Conseil indépendant et soutien opérationnel à la direction dans les domaines de l'énergie, du contrôle de gestion et des finances.</p><a class="cta" href="#kontakt">Prendre contact <span aria-hidden="true">↗</span></a></div>
+<div class="hero-visual"><img alt="Alpes valaisannes" src="wallis.jpg"/></div>
+</div>
+<div class="hero-note">Inspiré par nos montagnes</div>
+</div>
+<section id="leistungen">
+<div class="wrap">
+<div class="section-tag">Compétences</div>
+<h2>Une expertise solide.<br/>Une mise en œuvre pragmatique.</h2>
+<p class="intro">FORIVA associe vision stratégique et expérience opérationnelle pour des décisions solides et des solutions efficaces.</p>
+<div class="services">
+<article class="service"><span class="num">01 / ENERGY</span>
+<h3>Économie énergétique &amp; marchés</h3>
+<p>Stratégies de marché et de portefeuille, engagement et optimisation des centrales, vente et origination, pilotage des risques et de la performance.</p>
+</article>
+<article class="service"><span class="num">02 / FINANCE</span>
+<h3>Finance &amp; contrôle de gestion</h3>
+<p>Direction financière, planification, reporting, analyses de rentabilité et pilotage d'entreprise.</p>
+</article>
+<article class="service"><span class="num">03 / RISK</span>
+<h3>Risques &amp; gouvernance</h3>
+<p>Gestion des risques, aide à la décision, dispositifs de pilotage interne et gouvernance responsable.</p>
+</article>
+<article class="service"><span class="num">04 / LEADERSHIP</span>
+<h3>Stratégie &amp; management de transition</h3>
+<p>Développement stratégique, conduite du changement et prise de responsabilités de direction à titre temporaire.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="about" id="profil">
+<div class="wrap about-grid">
+<div>
+<div class="section-tag">Personnel &amp; indépendant</div>
+<h2>Une expérience<br/>qui fait avancer.</h2>
+<div class="about-aside"><strong>Michael Imhof</strong>
+<p>FORIVA · Fondateur · Conseil &amp; management de transition · Valais, Suisse</p>
+<a class="linkedin-profile" href="https://www.linkedin.com/in/michael-imhof-3a427a76" rel="noopener noreferrer" target="_blank">Voir mon profil LinkedIn ↗</a></div>
+</div>
+<div class="about-copy">
+<p>J'accompagne les entreprises et les organisations lorsqu'elles ont besoin de compréhension économique, d'esprit entrepreneurial et de capacité d'exécution.</p>
+<p>Ma longue expérience de direction dans le secteur de l'énergie, ainsi qu'en finance, contrôle de gestion et pilotage stratégique, constitue la base d'une collaboration indépendante et orientée vers les solutions.</p>
+<p>Je privilégie les analyses claires, les décisions fiables et une mise en œuvre rigoureuse, dans un esprit de partenariat et de création de valeur durable.</p>
+<p class="small">Selon les besoins, j'assume également des responsabilités opérationnelles de direction et des mandats à durée déterminée.</p>
+</div>
+</div>
+</section>
+<div class="statement">
+<div class="wrap">
+<p>« Ne pas se limiter à concevoir des solutions, mais <em>assumer des responsabilités</em> et obtenir des résultats. »</p>
+</div>
+</div>
+<section class="contact" id="kontakt">
+<div class="wrap contact-grid">
+<div>
+<div class="section-tag">Contact</div>
+<h2>Le dialogue<br/>fait avancer les choses.</h2>
+<p>Vous recherchez un partenaire de réflexion indépendant, le renfort rapide d'un spécialiste expérimenté ou un dirigeant pour une mission temporaire ? Je me réjouis d'échanger avec vous.</p>
+</div>
+<div class="contact-details"><a href="mailto:michael.imhof@foriva.ch">michael.imhof@foriva.ch ↗</a><a href="mailto:info@foriva.ch">info@foriva.ch ↗</a>
+<p class="small">FORIVA · Valais, Suisse</p>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap footer-inner"><span>© <span id="year">2026</span> FORIVA · Michael Imhof</span><span>Conseil indépendant &amp; renfort spécialisé et soutien de projet à court terme · <a href="mailto:info@foriva.ch?subject=Demande%20mentions%20legales">Informations complémentaires sur demande</a></span></div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
