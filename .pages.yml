@@ -1,0 +1,35 @@
+
+media:
+  input: .
+  output: /
+
+content:
+  - name: deutsch
+    label: Homepage Deutsch
+    type: file
+    path: content/de.json
+    fields:
+      - name: title
+        label: Haupttitel
+        type: string
+      - name: subtitle
+        label: Untertitel
+        type: string
+      - name: description
+        label: Beschreibung
+        type: text
+
+  - name: francais
+    label: Homepage Français
+    type: file
+    path: content/fr.json
+    fields:
+      - name: title
+        label: Titre principal
+        type: string
+      - name: subtitle
+        label: Sous-titre
+        type: string
+      - name: description
+        label: Description
+        type: text
