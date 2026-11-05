@@ -136,10 +136,28 @@
 
         if (value === "yes") {
           startAnalytics();
-        } else if (window.forivaAnalyticsStarted) {
+       
+        } else {
           window["ga-disable-" + GA_ID] = true;
+
+          const cookies = document.cookie.split(";");
+
+          cookies.forEach(cookie => {
+            const name = cookie.trim().split("=")[0];
+
+            if (/^(_ga($|_)|_gid$|_gat($|_))/.test(name)) {
+              ["", "; domain=foriva.ch", "; domain=.foriva.ch"]
+                .forEach(domain => {
+                  document.cookie =
+                    name + "=; Max-Age=0; path=/" +
+                    domain + "; SameSite=Lax";
+                });
+            }
+          });
+
           location.reload();
         }
+
       }
 
       document.getElementById("foriva-accept")
@@ -155,7 +173,6 @@
       showBanner();
     }
   }
-
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {
