@@ -1,16 +1,20 @@
-// FORIVA: Content edited with Pages CMS (content/de.json and content/fr.json).
-(async () => {
-  const lang = document.currentScript?.dataset.lang || 'de';
-  try {
-    const response = await fetch(`content/${lang}.json`, {cache: 'no-cache'});
-    if (!response.ok) return;
-    const content = await response.json();
-    for (const [key, value] of Object.entries(content)) {
-      const el = document.querySelector(`[data-foriva-field="${key}"]`);
-      if (!el || typeof value !== 'string') continue;
-      if (['headline','services_title','profile_title','contact_title'].includes(key)) {
-        el.replaceChildren(...value.split('\n').flatMap((line, i) => i ? [document.createElement('br'),document.createTextNode(line)] : [document.createTextNode(line)]));
-      } else { el.textContent = value; }
-    }
-  } catch (error) { console.warn('FORIVA CMS content unavailable; showing original text.', error); }
+/* FORIVA: vorhandene HTML-Texte funktionieren auch ohne CMS oder Webserver. */
+(() => {
+  'use strict';
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+  if (location.protocol === 'file:') return;
+  const lang = document.documentElement.lang.startsWith('fr') ? 'fr' : 'de';
+  fetch(`content/${lang}.json`, {cache:'no-store'})
+    .then(response => {if (!response.ok) throw new Error('Content unavailable'); return response.json();})
+    .then(data => {
+      document.querySelectorAll('[data-foriva-field]').forEach(element => {
+        const value = data[element.dataset.forivaField];
+        if (typeof value === 'string') element.textContent = value;
+      });
+      if (typeof data.page_title === 'string') document.title = data.page_title;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta && typeof data.meta_description === 'string') meta.content = data.meta_description;
+    })
+    .catch(() => {/* Die aktualisierten HTML-Texte bleiben als Rückfall erhalten. */});
 })();

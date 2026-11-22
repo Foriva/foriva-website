@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="de-CH">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="FORIVA – unabhängige Beratung und Interim Management in Energiewirtschaft, Finanzen, Risikomanagement und Strategie. Michael Imhof, Wallis." name="description"/>
-<meta content="#153746" name="theme-color"/>
-<title>FORIVA | Beratung &amp; Interim Management</title>
-<script defer src="analytics-consent.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Praktische Unterstützung für Energieversorger, Stromproduzenten, Verbände und öffentliche Institutionen. Michael Imhof, Deutsch und Französisch.">
+<meta name="theme-color" content="#153746">
+<title>FORIVA | Energievorhaben gemeinsam umsetzen</title>
 <style>
     :root {
       --navy: #153746;
@@ -103,7 +101,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr);
       min-height: 590px;
       align-items: center;
       gap: 28px
@@ -438,99 +436,114 @@
 
 .about-aside .linkedin-profile { display:inline-flex; align-items:center; margin-top:12px; font-size:14px; font-weight:650; color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
 .about-aside .linkedin-profile:hover { color:var(--teal); }
+
+/* Ergänzungen zur bestehenden Gestaltung */
+nav a, .lang-switch {font-size: .875rem}
+.nav {flex-wrap:wrap; padding-top:18px; padding-bottom:18px}
+nav {flex-wrap:wrap; gap:22px}
+.eyebrow, .section-tag {font-size:.8125rem; color:#31686b}
+[data-foriva-field] {white-space:pre-line}
+.hero-grid {padding-top:64px; padding-bottom:72px; min-height:590px}
+.hero h1 {font-size:clamp(38px,4.8vw,61px)}
+.hero p {font-size:1.125rem}
+.hero .hero-support {font-size:1rem; color:#36545e; margin:24px 0 0}
+.hero-visual {position:relative; min-height:350px; border-radius:12px; overflow:hidden; background:#dae8e8}
+.hero-visual img {position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:12px}
+.hero-visual svg {width:100%; height:350px; display:block}
+.hero-visual img[hidden] {display:none}
+.hero-note {display:none}
+.service .num {font-size:.8125rem; color:#31686b; letter-spacing:.08em}
+.service p, .about-aside p, .about-copy .small, .contact-details .small {font-size:1rem}
+.audience {background:var(--snow)}
+.audience-grid, .approach-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px}
+.audience-grid article {padding-top:24px; border-top:2px solid var(--teal)}
+.audience-grid h3, .approach-grid h3 {font-size:1.25rem; line-height:1.35; color:var(--navy); margin:0 0 12px}
+.audience-grid p, .approach-grid p {margin:0; color:#526b74}
+.approach-grid article {padding:24px; background:var(--snow)}
+.approach-note {margin:28px 0 0; color:#526b74}
+.about {background:white}
+.expertise {margin-top:30px; border-top:1px solid var(--line); padding-top:22px}
+.expertise p {font-size:1rem}
+footer {font-size:.875rem}
+.skip-link {position:absolute; left:16px; top:-100px; z-index:10; padding:10px 18px; background:var(--navy); color:white}
+.skip-link:focus {top:12px}
+@media(max-width:760px){
+ .nav {gap:16px; align-items:center}
+ nav {order:3; width:100%; gap:18px}
+ .lang-switch {margin-left:auto}
+ .hero-grid {padding-top:46px; padding-bottom:48px}
+ .hero-visual {min-height:240px}
+ .hero-visual svg {height:240px}
+ .audience-grid, .approach-grid {grid-template-columns:1fr; gap:24px}
+ section {padding:64px 0}
+ .hero h1 {font-size:clamp(35px,9vw,53px)}
+ .contact-details a {font-size:1rem}
+}
+
+/* Fotos von Michael Imhof */
+.hero-visual {min-height:0; min-width:0; width:100%; aspect-ratio:1.45; background:#e8eeeb}
+.hero-visual img {position:static; width:100%; height:100%; aspect-ratio:1.45; object-fit:cover; object-position:center; border-radius:12px}
+.landscape-band {margin:0; padding:0 0 72px}
+.landscape-band img {display:block; width:100%; height:360px; object-fit:cover; object-position:center 56%; border-radius:12px}
+.audience-photo {margin:28px 0 42px}
+.audience-photo img {display:block; width:100%; height:320px; object-fit:cover; object-position:center 62%; border-radius:12px}
+.profile-photo {margin:30px 0 0}
+.profile-photo img {display:block; width:100%; height:auto; max-height:510px; aspect-ratio:3/4; object-fit:cover; border-radius:12px}
+.eyebrow, .section-tag, .service .num {font-size:.875rem}
+@media(max-width:760px){
+ .hero-visual {min-height:0; width:100%; aspect-ratio:1.45}
+ .hero-visual img {height:auto; aspect-ratio:1.45}
+ .landscape-band {padding-bottom:44px}
+ .landscape-band img, .audience-photo img {height:230px}
+ .profile-photo img {max-height:420px; aspect-ratio:4/3; object-position:center 65%}
+ .nav {gap:14px}
+ nav {gap:14px}
+}
+
 </style>
+<script defer src="analytics-consent.js"></script>
 </head>
 <body>
-<header>
-<div class="wrap nav"><a aria-label="FORIVA Startseite" class="brand" href="#start">FORIVA<i>.</i></a>
-<nav aria-label="Hauptnavigation"><a href="#leistungen">Leistungen</a><a href="#profil">Profil</a><a href="#kontakt">Kontakt</a></nav>
-<div aria-label="Sprachauswahl" class="lang-switch"><a aria-current="page" href="index.html" lang="de">DE</a> | <a href="fr.html" lang="fr">FR</a></div></div>
-</header>
-<main>
-<div class="hero" id="start">
-<div class="wrap hero-grid">
-<div><div class="eyebrow" data-foriva-field="eyebrow">Beratung &amp; kurzfristige Fach- und Projektunterstützung</div><h1 data-foriva-field="headline">Unternehmerisch denken.<br/>Nachhaltig Werte schaffen.</h1><p data-foriva-field="intro">Unabhängige Beratung und operative Führungsunterstützung in Energiewirtschaft, Controlling &amp; Finanzen.</p><a class="cta" href="#kontakt">Kontakt aufnehmen <span aria-hidden="true">↗</span></a></div>
-<div class="hero-visual"><img alt="Walliser Alpen" src="wallis.jpg"/></div>
-</div>
-<div class="hero-note">Inspiriert von unserer Bergwelt</div>
-</div>
-<section id="leistungen">
-<div class="wrap">
-<div class="section-tag">Kompetenzen</div>
-<h2 data-foriva-field="services_title">Fundierte Expertise.<br/>Pragmatische Umsetzung.</h2>
-<p class="intro" data-foriva-field="services_intro">FORIVA verbindet strategische Perspektive mit operativer Erfahrung – für tragfähige
-          Entscheidungen und wirksame Lösungen.</p>
-<div class="services">
-<article class="service"><span class="num">01 / ENERGY</span>
-<h3 data-foriva-field="service1_title">Energiewirtschaft &amp; Märkte</h3>
-<p data-foriva-field="service1_text">
-  Markt- und Portfoliostrategien, Kraftwerkseinsatz und
-  Optimierung, Vertrieb &amp; Origination,
-  Risiko- und Performance-Steuerung.
-</p>
-</article>
-<article class="service"><span class="num">02 / FINANCE</span>
-<h3 data-foriva-field="service2_title">Finanzen &amp; Controlling</h3>
-<p data-foriva-field="service2_text">Finanzielle Führung, Planung, Reporting, Wirtschaftlichkeitsanalysen und Unternehmenssteuerung.</p>
-</article>
-<article class="service"><span class="num">03 / RISK</span>
-<h3 data-foriva-field="service3_title">Risiko &amp; Governance</h3>
-<p data-foriva-field="service3_text">Risikomanagement, Entscheidungsgrundlagen, interne Steuerung und verantwortungsvolle Unternehmensführung.
-            </p>
-</article>
-<article class="service"><span class="num">04 / LEADERSHIP</span>
-<h3 data-foriva-field="service4_title">Strategie &amp; Interim Management</h3>
-<p data-foriva-field="service4_text">Strategieentwicklung, Veränderungsprozesse und Führungsverantwortung auf Zeit.</p>
-</article>
-</div>
-</div>
-</section>
-<section class="about" id="profil">
-<div class="wrap about-grid">
-<div>
-<div class="section-tag">Persönlich &amp; unabhängig</div>
-<h2 data-foriva-field="profile_title">Erfahrung, die<br/>weiterbringt.</h2>
-<div class="about-aside"><strong>Michael Imhof</strong>
-<p>FORIVA · Gründer<br/>Beratung &amp; Interim Management<br/>Wallis · Schweiz</p>
-<a class="linkedin-profile" href="https://www.linkedin.com/in/michael-imhof-3a427a76" rel="noopener noreferrer" target="_blank">LinkedIn-Profil ansehen ↗</a></div>
-</div>
-<div class="about-copy">
-<p data-foriva-field="profile_intro">Ich unterstütze Unternehmen und Organisationen dort, wo wirtschaftliches Verständnis, unternehmerisches
-            Denken und Umsetzungskraft gefragt sind.</p>
-<p data-foriva-field="profile_text">Meine langjährige Erfahrung in Führungsfunktionen der Energiewirtschaft sowie in Finanzen, Controlling und
-            strategischer Unternehmenssteuerung bildet die Grundlage für eine unabhängige, lösungsorientierte
-            Zusammenarbeit.</p>
-<p data-foriva-field="profile_values">Im Mittelpunkt stehen klare Analysen, verlässliche Entscheidungen und die konsequente Umsetzung –
-            partnerschaftlich und mit Blick auf den langfristigen Mehrwert.</p>
-<p class="small" data-foriva-field="profile_extra">Auf Wunsch übernehme ich auch operative Führungsaufgaben und zeitlich begrenzte Mandate.</p>
-</div>
-</div>
-</section>
-<div class="statement">
-<div class="wrap">
-<p>«Nicht nur Konzepte entwickeln, sondern <em>Verantwortung übernehmen</em> und Ergebnisse ermöglichen.»</p>
-</div>
-</div>
-<section class="contact" id="kontakt">
-<div class="wrap contact-grid">
-<div>
-<div class="section-tag">Kontakt</div>
-<h2>Im Gespräch<br/>entsteht Bewegung.</h2>
-<p>Sie suchen einen unabhängigen Sparringspartner, kurzfristige Unterstützung durch einen erfahrenen Spezialisten oder eine Führungspersönlichkeit auf Zeit? Ich freue mich auf den Austausch.</p>
-</div>
-<div class="contact-details"><a href="mailto:michael.imhof@foriva.ch">michael.imhof@foriva.ch ↗</a><a href="mailto:info@foriva.ch">info@foriva.ch ↗</a>
-<p class="small">FORIVA · Wallis, Schweiz</p>
-</div>
-</div>
-</section>
+<!-- Texte hier oder in content/de.json bearbeiten. Zusammengehörige Dateien gemeinsam übernehmen. -->
+<a class="skip-link" href="#main">Zum Inhalt</a>
+<header><div class="wrap nav">
+<a class="brand" href="#start" aria-label="FORIVA">FORIVA<i>.</i></a>
+<nav aria-label="Hauptnavigation"><a href="#leistungen" data-foriva-field="nav_services">Leistungen</a><a href="#fuer-wen" data-foriva-field="nav_audience">Für wen</a><a href="#profil" data-foriva-field="nav_profile">Profil</a><a href="#kontakt" data-foriva-field="nav_contact">Kontakt</a></nav>
+<div class="lang-switch" aria-label="Sprachauswahl"><a href="index.html" lang="de" aria-current="page">DE</a> | <a href="fr.html" lang="fr">FR</a></div>
+</div></header>
+<main id="main">
+<div class="hero" id="start"><div class="wrap hero-grid">
+<div><div class="eyebrow" data-foriva-field="eyebrow">Energiekompetenz im Einsatz.</div><h1 data-foriva-field="headline">Energievorhaben
+gemeinsam umsetzen.</h1><p data-foriva-field="intro">Foriva begleitet Energieversorger, Stromproduzenten, Verbände und öffentliche Institutionen bei anspruchsvollen Aufgaben. Ich bringe meine Erfahrung ein, arbeite mit Ihren Teams und ergänze deren Kompetenzen, damit sie ihre Tätigkeiten selbstständig weiterführen können.</p>
+<a class="cta" href="#kontakt" data-foriva-field="cta">Vorhaben besprechen</a></div>
+<div class="hero-visual"><img src="assets/wegweiser-de.png" alt="Wegweiser mit den Foriva Kernleistungen und Foriva 2026 in einer herbstlichen Alpenlandschaft" width="1511" height="1041" fetchpriority="high"></div>
+</div></div>
+<section id="leistungen"><div class="wrap"><div class="section-tag" data-foriva-field="services_tag">Unser Beitrag</div><h2 data-foriva-field="services_title">Erfahrung einbringen.
+Umsetzung ermöglichen.</h2><p class="intro" data-foriva-field="services_intro">Wir arbeiten unmittelbar mit Ihrem Management und Ihren Mitarbeitenden an konkreten Aufgaben. Dabei verbinden wir Branchenkenntnis, unternehmerisches Verständnis und Erfahrung in der Zusammenarbeit mit den Beteiligten.</p><div class="services"><article class="service"><span class="num" data-foriva-field="service1_label">Umsetzung</span><h3 data-foriva-field="service1_title">Vorhaben voranbringen</h3><p data-foriva-field="service1_text">Arbeitspakete übernehmen, Beteiligte koordinieren und beschlossene Massnahmen gemeinsam umsetzen. Wir schaffen zusätzliche Kapazität, damit Ihre Vorhaben im betrieblichen Alltag vorankommen.</p></article>
+<article class="service"><span class="num" data-foriva-field="service2_label">Produktion und Markt</span><h3 data-foriva-field="service2_title">Produktion und Markt verbinden</h3><p data-foriva-field="service2_text">Den Aufbau und die Weiterentwicklung von Produktionsaktivitäten organisatorisch und energiewirtschaftlich begleiten. Bewirtschaftung, Vermarktung, Risiken und wirtschaftliche Ziele beziehen wir gemeinsam ein.</p></article>
+<article class="service"><span class="num" data-foriva-field="service3_label">Zusammenarbeit</span><h3 data-foriva-field="service3_title">Abläufe und Teams stärken</h3><p data-foriva-field="service3_text">Zusammen mit dem Management Schnittstellen zwischen Produktion, Energiebewirtschaftung, Vertrieb und Administration klären. Mit Ihren Teams entwickeln wir praktikable Abläufe und unterstützen deren Einführung im Tagesgeschäft.</p></article>
+<article class="service"><span class="num" data-foriva-field="service4_label">Unterstützung auf Zeit</span><h3 data-foriva-field="service4_title">Engpässe überbrücken</h3><p data-foriva-field="service4_text">Bei Mehrbelastung, personellen Ausfällen und Auszeiten oder neuen Aufgaben operativ mitarbeiten. Wir entlasten bestehende Verantwortliche und sichern die Kontinuität laufender Arbeiten und Projekte.</p></article>
+<article class="service"><span class="num" data-foriva-field="service5_label">Wissenstransfer</span><h3 data-foriva-field="service5_title">Mitarbeitende befähigen</h3><p data-foriva-field="service5_text">Wissen anhand konkreter Aufgaben vermitteln, Mitarbeitende einarbeiten und schulen. Wir dokumentieren Arbeitsweisen und bereiten die selbstständige Weiterführung im Unternehmen vor.</p></article>
+<article class="service"><span class="num" data-foriva-field="service6_label">Branche und öffentliche Hand</span><h3 data-foriva-field="service6_title">Gemeinsame Aufgaben voranbringen</h3><p data-foriva-field="service6_text">Verbände und öffentliche Institutionen bei Fachprojekten, Arbeitsgruppen und Energievorhaben unterstützen. Wir bereiten Grundlagen auf, koordinieren Beteiligte und helfen bei der praktischen Umsetzung.</p></article></div></div></section>
+<div class="landscape-band"><div class="wrap"><img src="assets/gletscher.jpg" alt="Gletscher, Bergsee und alpine Landschaft" width="2048" height="1336" loading="lazy" decoding="async"></div></div>
+<section class="audience" id="fuer-wen"><div class="wrap"><div class="section-tag" data-foriva-field="audience_tag">Für wen wir arbeiten</div><h2 data-foriva-field="audience_title">Nah an der Branche.
+Mit Blick auf das Ganze.</h2><figure class="audience-photo"><img src="assets/bergsee.jpg" alt="Bergsee in einer offenen alpinen Landschaft" width="2048" height="1254" loading="lazy" decoding="async"></figure><div class="audience-grid"><article><h3 data-foriva-field="audience1_title">Energieversorger und Stromproduzenten</h3><p data-foriva-field="audience1_text">Produktionsgesellschaften, Stadtwerke und weitere Versorger: Unterstützung bei Produktionsvorhaben, Bewirtschaftung, Vermarktung und neuen betrieblichen Aufgaben.</p></article>
+<article><h3 data-foriva-field="audience2_title">Verbände und Branchenorganisationen</h3><p data-foriva-field="audience2_text">Fachprojekte und Arbeitsgruppen begleiten, die Zusammenarbeit koordinieren und Mitglieder mit praxisnahen Grundlagen und Schulungen unterstützen.</p></article>
+<article><h3 data-foriva-field="audience3_title">Kantonale und nationale Institutionen</h3><p data-foriva-field="audience3_text">Energievorhaben und Programme begleiten, Entscheidungsgrundlagen aufbereiten und den Austausch zwischen Verwaltung, Politik und Energiebranche unterstützen.</p></article></div></div></section>
+<section id="zusammenarbeit"><div class="wrap"><div class="section-tag" data-foriva-field="approach_tag">Zusammenarbeit</div><h2 data-foriva-field="approach_title">Begleiten. Beschleunigen.
+Wissen verankern.</h2><div class="approach-grid"><article><h3 data-foriva-field="approach1_title">Aufgaben gemeinsam klären</h3><p data-foriva-field="approach1_text">Wir vereinbaren Prioritäten, konkrete Beiträge und Verantwortlichkeiten. Der Einsatz richtet sich nach Ihrem Bedarf und ergänzt Ihre bestehenden Strukturen.</p></article>
+<article><h3 data-foriva-field="approach2_title">Im Alltag mitarbeiten</h3><p data-foriva-field="approach2_text">Wir bearbeiten Aufgaben mit Ihren Teams, klären Schnittstellen und stimmen Fortschritte regelmässig ab. Wissen wird direkt bei der Umsetzung weitergegeben.</p></article>
+<article><h3 data-foriva-field="approach3_title">Weiterführung vorbereiten</h3><p data-foriva-field="approach3_text">Wir dokumentieren Abläufe, schulen Mitarbeitende und übergeben offene Punkte und Zuständigkeiten. So bleibt die Erfahrung im Unternehmen nutzbar.</p></article></div><p class="approach-note" data-foriva-field="approach_note">Einsätze nach Bedarf, typischerweise für drei bis sechs Monate und auch in Teilzeit. Umfang, Präsenz und Ziele vereinbaren wir gemeinsam.</p></div></section>
+<section class="about" id="profil"><div class="wrap about-grid"><div><div class="section-tag" data-foriva-field="profile_tag">Persönlich und unabhängig</div><h2 data-foriva-field="profile_title">Branchenpraxis,
+die weiterbringt.</h2><div class="about-aside"><strong>Michael Imhof</strong><p data-foriva-field="profile_role">Gründer · Energiebewirtschaftung und Controlling
+Brig-Glis · Schweiz</p><a class="linkedin-profile" href="https://www.linkedin.com/in/michael-imhof-3a427a76" rel="noopener noreferrer" target="_blank" data-foriva-field="linkedin">LinkedIn-Profil ansehen</a><figure class="profile-photo"><img src="assets/bergbach.jpg" alt="Fliessender Bergbach zwischen Felsen und Lärchen" width="1536" height="2048" loading="lazy" decoding="async"></figure></div></div>
+<div class="about-copy"><p data-foriva-field="profile_intro">Ich begleite Unternehmen und Institutionen dort, wo energiewirtschaftliche Erfahrung, zusätzliche Kapazität und praktische Mitarbeit gefragt sind.</p><p data-foriva-field="profile_text">Als langjähriger Leiter Energiewirtschaft und Vertrieb sowie Mitglied der Direktion der Walliser Kraftwerke verbinde ich fundierte Branchenkenntnisse mit praktischer Erfahrung in der operativen und strategischen Unternehmensführung. Meine Erfahrung umfasst Vertrieb, Portfolio- und Risikosteuerung, Kraftwerksbewirtschaftung und -bewertung, Energiehandel sowie die Organisations- und Prozessentwicklung.</p><p data-foriva-field="profile_values">Die Nähe zur Produktion und die Zusammenarbeit mit Produktionsgesellschaften, EVU-Partnern, Verwaltungsräten, Behörden und Politik prägen meine Arbeit. Ich bringe unterschiedliche Perspektiven zusammen und arbeite mit den Teams an tragfähigen Lösungen.</p><p class="small" data-foriva-field="profile_extra">Frühere Verantwortung in Finanzen und Controlling in den Bereichen Vertrieb und Netz ergänzt diese Branchenpraxis. Ich arbeite auf Deutsch und Französisch und vermittle das Wissen, das für die selbstständige Weiterführung der Tätigkeiten erforderlich ist.</p><div class="expertise"><h3 data-foriva-field="expertise_title">Fachliche Kompetenzen</h3><p data-foriva-field="expertise_text">Portfoliomanagement und Energiehandel · Vertrieb und Origination · Kraftwerksbewirtschaftung, -bewertung und -optimierung · Risiko- und Performancesteuerung · Organisation und Prozesse · Finanzen und Controlling</p></div></div></div></section>
+<div class="statement"><div class="wrap"><p data-foriva-field="statement">Teams entlasten. Vorhaben beschleunigen.
+Die Kompetenzen Ihrer Teams ergänzen und den Wissenstransfer fördern.</p></div></div>
+<section class="contact" id="kontakt"><div class="wrap contact-grid"><div><div class="section-tag" data-foriva-field="contact_tag">Kontakt</div><h2 data-foriva-field="contact_title">Was möchten Sie
+voranbringen?</h2><p data-foriva-field="contact_text">Ein Vorhaben braucht zusätzliche Kapazität, ein Team fachliche Unterstützung oder eine neue Aufgabe praktische Begleitung? Ich freue mich darauf, Ihre Situation kennenzulernen.</p></div><div class="contact-details"><a href="mailto:michael.imhof@foriva.ch">michael.imhof@foriva.ch</a><a href="mailto:info@foriva.ch">info@foriva.ch</a><p class="small" data-foriva-field="contact_location">FORIVA GmbH · Brig-Glis, Schweiz
+Zusammenarbeit auf Deutsch und Französisch</p></div></div></section>
 </main>
-<footer>
-<div class="wrap footer-inner"><span>© <span id="year">2026</span> FORIVA · Michael Imhof</span><span>Unabhängige Beratung &amp; kurzfristige Fach- und Projektunterstützung · <a href="mailto:info@foriva.ch?subject=Anfrage%20Impressum">Weitere Angaben auf Anfrage</a></span></div>
-<div class="wrap" style="padding-top:12px; padding-bottom:16px; font-size:14px;">
-  <a href="datenschutz.html" style="color:inherit; text-decoration:underline;">Datenschutzerklärung</a>
-</div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="cms-content.js"></script>
-</body>
-</html>
+<footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> FORIVA · Michael Imhof</span><span><span data-foriva-field="footer_text">Praktische Unterstützung für Akteure der Strombranche und öffentliche Institutionen</span> · <a href="mailto:info@foriva.ch?subject=Informations%20FORIVA" data-foriva-field="legal_link">Weitere Angaben auf Anfrage</a></span></div><div class="wrap" style="padding-top:12px;padding-bottom:16px;font-size:14px"><a href="datenschutz.html" style="color:inherit;text-decoration:underline">Datenschutzerklärung</a></div></footer>
+<script src="cms-content.js" data-lang="de"></script>
+</body></html>

@@ -1,0 +1,404 @@
+media:
+  input: .
+  output: /
+content:
+- name: deutsch
+  label: Homepage Deutsch
+  type: file
+  path: content/de.json
+  fields:
+  - name: page_title
+    label: Seitentitel
+    type: text
+  - name: meta_description
+    label: Beschreibung für Suchmaschinen
+    type: text
+  - name: nav_services
+    label: nav services
+    type: text
+  - name: nav_audience
+    label: nav audience
+    type: text
+  - name: nav_profile
+    label: nav profile
+    type: text
+  - name: nav_contact
+    label: nav contact
+    type: text
+  - name: eyebrow
+    label: Kurzbeschreibung
+    type: text
+  - name: headline
+    label: Haupttitel
+    type: text
+  - name: intro
+    label: Einleitung
+    type: text
+  - name: cta
+    label: Kontaktknopf
+    type: text
+  - name: services_tag
+    label: services tag
+    type: text
+  - name: services_title
+    label: Titel Dienstleistungen
+    type: text
+  - name: services_intro
+    label: Einleitung Dienstleistungen
+    type: text
+  - name: service1_label
+    label: service1 label
+    type: text
+  - name: service1_title
+    label: Dienstleistung 1 - Titel
+    type: text
+  - name: service1_text
+    label: Dienstleistung 1 - Beschreibung
+    type: text
+  - name: service2_label
+    label: service2 label
+    type: text
+  - name: service2_title
+    label: Dienstleistung 2 - Titel
+    type: text
+  - name: service2_text
+    label: Dienstleistung 2 - Beschreibung
+    type: text
+  - name: service3_label
+    label: service3 label
+    type: text
+  - name: service3_title
+    label: Dienstleistung 3 - Titel
+    type: text
+  - name: service3_text
+    label: Dienstleistung 3 - Beschreibung
+    type: text
+  - name: service4_label
+    label: service4 label
+    type: text
+  - name: service4_title
+    label: Dienstleistung 4 - Titel
+    type: text
+  - name: service4_text
+    label: Dienstleistung 4 - Beschreibung
+    type: text
+  - name: service5_label
+    label: service5 label
+    type: text
+  - name: service5_title
+    label: service5 title
+    type: text
+  - name: service5_text
+    label: service5 text
+    type: text
+  - name: service6_label
+    label: service6 label
+    type: text
+  - name: service6_title
+    label: service6 title
+    type: text
+  - name: service6_text
+    label: service6 text
+    type: text
+  - name: audience_tag
+    label: audience tag
+    type: text
+  - name: audience_title
+    label: audience title
+    type: text
+  - name: audience1_title
+    label: audience1 title
+    type: text
+  - name: audience1_text
+    label: audience1 text
+    type: text
+  - name: audience2_title
+    label: audience2 title
+    type: text
+  - name: audience2_text
+    label: audience2 text
+    type: text
+  - name: audience3_title
+    label: audience3 title
+    type: text
+  - name: audience3_text
+    label: audience3 text
+    type: text
+  - name: approach_tag
+    label: approach tag
+    type: text
+  - name: approach_title
+    label: approach title
+    type: text
+  - name: approach1_title
+    label: approach1 title
+    type: text
+  - name: approach1_text
+    label: approach1 text
+    type: text
+  - name: approach2_title
+    label: approach2 title
+    type: text
+  - name: approach2_text
+    label: approach2 text
+    type: text
+  - name: approach3_title
+    label: approach3 title
+    type: text
+  - name: approach3_text
+    label: approach3 text
+    type: text
+  - name: approach_note
+    label: approach note
+    type: text
+  - name: profile_tag
+    label: profile tag
+    type: text
+  - name: profile_title
+    label: Profil - Titel
+    type: text
+  - name: profile_role
+    label: profile role
+    type: text
+  - name: profile_intro
+    label: Profil - Einleitung
+    type: text
+  - name: profile_text
+    label: Profil - Beschreibung
+    type: text
+  - name: profile_values
+    label: Profil - Werte
+    type: text
+  - name: profile_extra
+    label: Profil - Zusatz
+    type: text
+  - name: expertise_title
+    label: expertise title
+    type: text
+  - name: expertise_text
+    label: expertise text
+    type: text
+  - name: linkedin
+    label: linkedin
+    type: text
+  - name: statement
+    label: statement
+    type: text
+  - name: contact_tag
+    label: contact tag
+    type: text
+  - name: contact_title
+    label: contact title
+    type: text
+  - name: contact_text
+    label: contact text
+    type: text
+  - name: contact_location
+    label: contact location
+    type: text
+  - name: footer_text
+    label: footer text
+    type: text
+  - name: legal_link
+    label: legal link
+    type: text
+- name: francais
+  label: Homepage Français
+  type: file
+  path: content/fr.json
+  fields:
+  - name: page_title
+    label: Titre de la page
+    type: text
+  - name: meta_description
+    label: Description pour les moteurs de recherche
+    type: text
+  - name: nav_services
+    label: nav services
+    type: text
+  - name: nav_audience
+    label: nav audience
+    type: text
+  - name: nav_profile
+    label: nav profile
+    type: text
+  - name: nav_contact
+    label: nav contact
+    type: text
+  - name: eyebrow
+    label: Description courte
+    type: text
+  - name: headline
+    label: Titre principal
+    type: text
+  - name: intro
+    label: Introduction
+    type: text
+  - name: cta
+    label: Bouton de contact
+    type: text
+  - name: services_tag
+    label: services tag
+    type: text
+  - name: services_title
+    label: Titre des prestations
+    type: text
+  - name: services_intro
+    label: Introduction des prestations
+    type: text
+  - name: service1_label
+    label: service1 label
+    type: text
+  - name: service1_title
+    label: Prestation 1 - Titre
+    type: text
+  - name: service1_text
+    label: Prestation 1 - Description
+    type: text
+  - name: service2_label
+    label: service2 label
+    type: text
+  - name: service2_title
+    label: Prestation 2 - Titre
+    type: text
+  - name: service2_text
+    label: Prestation 2 - Description
+    type: text
+  - name: service3_label
+    label: service3 label
+    type: text
+  - name: service3_title
+    label: Prestation 3 - Titre
+    type: text
+  - name: service3_text
+    label: Prestation 3 - Description
+    type: text
+  - name: service4_label
+    label: service4 label
+    type: text
+  - name: service4_title
+    label: Prestation 4 - Titre
+    type: text
+  - name: service4_text
+    label: Prestation 4 - Description
+    type: text
+  - name: service5_label
+    label: service5 label
+    type: text
+  - name: service5_title
+    label: service5 title
+    type: text
+  - name: service5_text
+    label: service5 text
+    type: text
+  - name: service6_label
+    label: service6 label
+    type: text
+  - name: service6_title
+    label: service6 title
+    type: text
+  - name: service6_text
+    label: service6 text
+    type: text
+  - name: audience_tag
+    label: audience tag
+    type: text
+  - name: audience_title
+    label: audience title
+    type: text
+  - name: audience1_title
+    label: audience1 title
+    type: text
+  - name: audience1_text
+    label: audience1 text
+    type: text
+  - name: audience2_title
+    label: audience2 title
+    type: text
+  - name: audience2_text
+    label: audience2 text
+    type: text
+  - name: audience3_title
+    label: audience3 title
+    type: text
+  - name: audience3_text
+    label: audience3 text
+    type: text
+  - name: approach_tag
+    label: approach tag
+    type: text
+  - name: approach_title
+    label: approach title
+    type: text
+  - name: approach1_title
+    label: approach1 title
+    type: text
+  - name: approach1_text
+    label: approach1 text
+    type: text
+  - name: approach2_title
+    label: approach2 title
+    type: text
+  - name: approach2_text
+    label: approach2 text
+    type: text
+  - name: approach3_title
+    label: approach3 title
+    type: text
+  - name: approach3_text
+    label: approach3 text
+    type: text
+  - name: approach_note
+    label: approach note
+    type: text
+  - name: profile_tag
+    label: profile tag
+    type: text
+  - name: profile_title
+    label: Profil - Titre
+    type: text
+  - name: profile_role
+    label: profile role
+    type: text
+  - name: profile_intro
+    label: Profil - Introduction
+    type: text
+  - name: profile_text
+    label: Profil - Description
+    type: text
+  - name: profile_values
+    label: Profil - Valeurs
+    type: text
+  - name: profile_extra
+    label: Profil - Complément
+    type: text
+  - name: expertise_title
+    label: expertise title
+    type: text
+  - name: expertise_text
+    label: expertise text
+    type: text
+  - name: linkedin
+    label: linkedin
+    type: text
+  - name: statement
+    label: statement
+    type: text
+  - name: contact_tag
+    label: contact tag
+    type: text
+  - name: contact_title
+    label: contact title
+    type: text
+  - name: contact_text
+    label: contact text
+    type: text
+  - name: contact_location
+    label: contact location
+    type: text
+  - name: footer_text
+    label: footer text
+    type: text
+  - name: legal_link
+    label: legal link
+    type: text
