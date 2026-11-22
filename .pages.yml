@@ -31,7 +31,7 @@ content:
         label: Dienstleistung 1 - Beschreibung
         type: text
       - name: service2_title
-        label: Dienstleistung 2 - Titel
+        label: Bereich Dienstleistung 2
         type: string
       - name: service2_text
         label: Dienstleistung 2 - Beschreibung
